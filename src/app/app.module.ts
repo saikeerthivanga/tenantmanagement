@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire'
 import { environment} from '../environments/environment.prod';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { CreatePropertyComponent } from './create-property/create-property.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CreatePropertyComponent
   ],
   imports: [
     BrowserModule,
