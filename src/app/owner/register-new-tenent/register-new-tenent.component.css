@@ -1,0 +1,10 @@
+.spinner{
+    margin-left: 45%;
+    margin-top: 17%;
+}
+
+mat-card{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 3rem;
+}
