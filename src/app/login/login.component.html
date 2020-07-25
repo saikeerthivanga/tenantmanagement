@@ -1,1 +1,56 @@
-<p>login works!</p>
+<mat-card>
+  <form #ng="ngForm" (ngSubmit)="login(ng)">
+    <div class="mt-2">
+      <mat-form-field>
+        <input
+          placeholder="Email"
+          matInput
+          type="email"
+          name="email"
+          required
+          ngModel
+        />
+        <mat-error>Faculty Id is Required</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="mt-2">
+      <mat-form-field>
+        <input
+          [type]="hidepwd ? 'password' : 'text'"
+          placeholder="Password"
+          matInput
+          type="password"
+          name="password"
+          #password="ngModel"
+          required
+          minlength="8"
+          ngModel
+        />
+        <button
+          type="button"
+          mat-icon-button
+          matSuffix
+          (click)="hidepwd = !hidepwd"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hidepwd"
+        >
+          <mat-icon>{{ hidepwd ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+        <mat-error *ngIf="password.invalid"
+          >Password length should be atleast 8 characters</mat-error
+        >
+      </mat-form-field>
+    </div>
+
+    <div class="mt-5">
+      <button mat-stroked-button color="primary" type="submit">
+        <span
+          *ngIf="spinnerload"
+          class="spinner-border spinner-border-sm"
+        ></span>
+        Sign Up
+      </button>
+    </div>
+  </form>
+</mat-card>

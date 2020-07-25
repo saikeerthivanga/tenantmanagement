@@ -21,4 +21,9 @@ export class AppComponent implements OnInit {
     });
   }
   constructor(private auth: AngularFireAuth, private router: Router) {}
+  logout() {
+    this.auth.auth.signOut();
+    // this.router.navigate([""]);
+    alert("logout success");
+  }
 }

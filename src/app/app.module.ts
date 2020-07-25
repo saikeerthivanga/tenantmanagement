@@ -16,6 +16,7 @@ import {
   MatIconModule,
   MatButtonModule,
 } from "@angular/material";
+import { OwnerModule } from "./owner/owner.module";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent],
@@ -31,6 +32,7 @@ import {
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    OwnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
