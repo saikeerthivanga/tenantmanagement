@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/complaint"
+        android:icon="@drawable/account"
+        android:title="@string/complaints"
+        app:showAsAction="always"/>
+    <item android:id="@+id/payment"
+        android:icon="@drawable/ic_baseline_payment_24"
+        android:title="@string/payment_and_dues"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/logout"
+        android:title="@string/logout"
+        app:showAsAction="never"/>
+</menu>

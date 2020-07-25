@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "701623211445",
+    "firebase_url": "https://tenant-management-system-5798d.firebaseio.com",
+    "project_id": "tenant-management-system-5798d",
+    "storage_bucket": "tenant-management-system-5798d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701623211445:android:babb05a42723f6bb6835fc",
+        "android_client_info": {
+          "package_name": "com.example.tenantmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701623211445-5hl0kkea77ki0qu86tfs6c37unr2aqhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALqopj6YA6n6twNXSHd_Buzc0KF4xszYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701623211445-5hl0kkea77ki0qu86tfs6c37unr2aqhh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
