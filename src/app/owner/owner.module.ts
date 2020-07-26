@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { OwnerRoutingModule } from './owner-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { MatCardModule, MatInputModule, MatButtonModule, MatToolbarModule, MatProgressSpinnerModule} from '@angular/material'
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -15,7 +16,7 @@ import { CreatePropertyComponent } from './create-property/create-property.compo
 
 
 @NgModule({
-  declarations: [RegisterNewTenentComponent, DetailregisterComponent, CreatePropertyComponent],
+  declarations: [RegisterNewTenentComponent,DashboardComponent, DetailregisterComponent, CreatePropertyComponent],
   imports: [
     CommonModule,
     OwnerRoutingModule,

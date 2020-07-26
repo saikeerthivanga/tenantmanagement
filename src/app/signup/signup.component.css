@@ -4,18 +4,15 @@ mat-card {
   padding-bottom: 3rem;
   margin-left: 30%;
   margin-right: 30%;
-  width: 32%;
-  font-family: "Lato", sans-serif;
+  width: 37%;
   /* text-align: center; */
 }
 h3 {
   text-align: center;
 }
 form {
-  margin-top: 10%;
   margin-left: 20%;
   margin-right: 20%;
-  font-family: "Lato", sans-serif;
 }
 .mt-5 {
   text-align: center;
