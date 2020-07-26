@@ -1,0 +1,44 @@
+<div *ngIf="!isLoading" class="mt-5 mb-5">
+    <div>
+        <mat-card>
+            <mat-card-title>{{obj.propertyname}}</mat-card-title>
+            <mat-card-subtitle>{{obj.propertylocation}}</mat-card-subtitle>
+            <img [src]="obj.image_url" width="100%" height="100%" alt="Image">
+            <hr>
+            <div class="mt-5 row">
+                <div class="col-sm-6">
+                    <p> <b>Area(Square feet): </b> {{obj.area_in_sqft}}</p>
+                </div>
+                
+                <div class="col-sm-6" style="text-align: end;">
+                    <p> <b>Price(In Rupees): </b> {{obj.price_in_rupees}}</p>
+                </div>
+            </div>
+            <hr>
+        </mat-card>
+    </div>
+    <div *ngIf="!tenetassigned">
+        <mat-card>
+            <form #ng="ngForm" (ngSubmit)="assign(ng)">
+                <mat-form-field>
+                    <input matInput name="email" type="email" required placeholder="Enter registered email of the tenent" ngModel>
+                    <mat-error>Email is required</mat-error>
+                </mat-form-field>
+                <div class="text-center">
+                     <button type="submit" mat-stroked-button color="primary">Register this tenent</button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+    <div *ngIf="tenetassigned" class="mt-5">
+        <mat-card>
+            <mat-card-title>Tenent registered to this property is</mat-card-title>
+            <mat-card-subtitle>{{email}}</mat-card-subtitle>
+        </mat-card>
+    </div>
+</div>
+
+<div *ngIf="isLoading">
+    <mat-spinner class="spinner"></mat-spinner>
+
+</div>

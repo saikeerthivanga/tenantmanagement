@@ -1,0 +1,47 @@
+<div *ngIf="isLoading" class="spinner">
+
+    <mat-spinner></mat-spinner>
+
+</div>
+
+<div *ngIf="!isLoading" style="margin: 2rem;">
+    
+
+    <h3 class="text-center">Choose a property of yours to register a new tenent</h3>
+    
+    <div *ngFor="let i of propertieslist">
+        
+        <mat-card>
+            <mat-card-title>{{i.propertyname}}</mat-card-title>
+            <mat-card-subtitle>{{i.propertylocation}}</mat-card-subtitle>
+            <img [src]="i.image_url" width="100%" height="100%" alt="Image">
+            <hr>
+            <div class="mt-5 row">
+                <div class="col-sm-6">
+                    <p> <b>Area(Square feet): </b> {{i.area_in_sqft}}</p>
+                </div>
+                
+                <div class="col-sm-6" style="text-align: end;">
+                    <p> <b>Price(In Rupees): </b> {{i.price_in_rupees}}</p>
+                </div>
+            </div>
+            <hr>
+            
+            <mat-card-actions>
+                <div *ngIf="i.tenentassigned">
+                    <button mat-stroked-button color="primary" (click)="viewtenet(i.id)"> View tenent assigned to this property</button>
+                </div>
+                <div *ngIf="!i.tenentassigned">
+                    <button mat-stroked-button color="primary" (click)="addtenet(i.id)"> Assign a new tenent to this property</button>
+                </div>
+            </mat-card-actions>
+            
+            
+            
+        </mat-card>
+        
+        
+
+    </div>
+    
+</div>
