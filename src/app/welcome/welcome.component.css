@@ -1,0 +1,12 @@
+mat-card{
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.developer{
+    border:thin solid black;
+    width: 80%;
+    margin: auto;
+    background-color: lightgoldenrodyellow;
+}

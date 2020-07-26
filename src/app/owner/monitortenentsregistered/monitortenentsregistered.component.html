@@ -1,0 +1,24 @@
+<div *ngIf="isLoading">
+    <mat-spinner class="spinner"></mat-spinner>
+
+</div>
+
+<div *ngIf="!isLoading" class="mt-5 mb-5">
+    <div *ngIf="tenants.length > 0">
+        <h4 class="text-center">List of tenents registered to each property of yours</h4>
+
+        <div *ngFor="let i of tenants">
+            <mat-card *ngIf="i.tenentassigned">
+                <mat-card-header>
+                    <img style="background-size: cover;" mat-card-avatar [src]="i.image_url"  alt="Image">
+                    <mat-card-title>Property Name : {{i.propertyname}}</mat-card-title>
+                    <mat-card-subtitle>Tenant registered: {{i.tenentemail}}</mat-card-subtitle>               
+                </mat-card-header>
+            </mat-card>
+        </div>
+    </div>
+    <div *ngIf="tenants.length== 0">
+        <h4 class="text-center">No tenents assigned to your property</h4>
+
+    </div>
+</div>

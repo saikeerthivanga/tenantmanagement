@@ -1,0 +1,54 @@
+<div class="mt-5">
+    <div *ngIf="!spinnerload">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Welcome {{name}}</mat-card-title>
+                
+            </mat-card-header>
+            <div class="text-center">
+                <div *ngIf=" fileurl!='' ">
+                    <img style="border: thin solid black;" [src]="fileurl" height="150" width="150" alt="">
+                </div>
+                <div *ngIf="fileurl=='' ">
+                    <img src="../../../assets/emptyprofilepic.png" height="150" width="150" alt="">
+                </div>
+                
+                    <input style="visibility: hidden;" #ok type="file" id="file" name="file" (input)="getfile($event.target.files[0])">
+                    
+                    <br>
+                    <button mat-stroked-button color="primary" (click)="ok.click()">Change</button>
+                    &nbsp;
+                    <button (click)="uploadimage()" mat-stroked-button color="primary">
+                        <span *ngIf="spinnerload" class="spinner-border spinner-border-sm"></span>
+                        Save
+                    </button>
+            </div>
+            <form #ng="ngForm" (ngSubmit)="update(ng)">
+                <mat-form-field>
+                    <input matInput type="email" [(ngModel)]="email" required readonly name="email" placeholder="Email">
+    
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="name" required name="name" placeholder="Name">
+                    <mat-error>Name is required</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput type="text" [(ngModel)]="mobilenumber" name="mobilenumber" placeholder="Mobile Number">
+                    
+                </mat-form-field>
+                <mat-form-field>
+                    <textarea matInput type="text" [(ngModel)]="address" name="address" placeholder="Address"></textarea>
+                    
+                </mat-form-field>
+                
+                <div class="text-center">
+                    <button type="submit" mat-stroked-button color="accent">Submit</button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+    <div *ngIf="spinnerload">
+        <mat-spinner class="spinner"></mat-spinner>
+    
+    </div>
+</div>

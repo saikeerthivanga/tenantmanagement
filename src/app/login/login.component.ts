@@ -21,13 +21,14 @@ export class LoginComponent implements OnInit {
           if (result["emailVerified"] == false) {
             alert("Please verify email before login");
           } else {
-            this.router.navigate(["owner/dashboard"]);
+            this.router.navigate(["/admin/"]);
             alert("login success");
             Form.resetForm();
           }
         })
         .catch((err) => {
           console.log(err);
+          alert(err.message);
         });
     }
   }

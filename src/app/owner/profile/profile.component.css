@@ -1,0 +1,14 @@
+mat-card{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+
+mat-form-field, textarea{
+    width: 100%;
+}
+
+.spinner{
+    margin-left: 45%;
+    margin-top: 17%;
+  }

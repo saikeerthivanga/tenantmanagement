@@ -29,10 +29,10 @@ export class SignupComponent implements OnInit {
             console.log(result);
             result.user.updateProfile({ displayName: Form.value.name });
             this.db
-              .collection("users")
+              .collection("owner")
               .doc(result.user.uid)
               .set({ email: Form.value.email, name: Form.value.name });
-            this.router.navigate(["login"]);
+            this.router.navigate(["/admin/"]);
             Form.resetForm();
           })
           .catch((err) => {

@@ -1,4 +1,4 @@
-.nav1 {
+/* .nav1 {
   margin-top: 2%;
   margin-bottom: 2%;
 }
@@ -12,4 +12,27 @@
 .nav2 a {
   margin-left: 1rem;
   margin-right: 1rem;
+} */
+
+
+mat-card{
+  width: 70%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: black;
+}
+
+li{
+  margin-top: 1rem;
+}
+
+mat-card-content{
+  width: 100%;
 }

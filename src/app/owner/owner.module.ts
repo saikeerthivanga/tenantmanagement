@@ -12,11 +12,14 @@ import { RegisterNewTenentComponent } from './register-new-tenent/register-new-t
 import { DetailregisterComponent } from './detailregister/detailregister.component' 
 import {FormsModule} from '@angular/forms';
 import { CreatePropertyComponent } from './create-property/create-property.component';
+import { OwnerComponent } from './owner.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MonitortenentsregisteredComponent } from './monitortenentsregistered/monitortenentsregistered.component';
 
 
 
 @NgModule({
-  declarations: [RegisterNewTenentComponent,DashboardComponent, DetailregisterComponent, CreatePropertyComponent],
+  declarations: [RegisterNewTenentComponent,DashboardComponent, DetailregisterComponent, CreatePropertyComponent, OwnerComponent, ProfileComponent, MonitortenentsregisteredComponent],
   imports: [
     CommonModule,
     OwnerRoutingModule,

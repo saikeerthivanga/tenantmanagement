@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     this.loading = true;
     this.auth.authState.subscribe((u) => {
       this.loading = false;
-
+      
       this.user = u;
     });
   }
@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
     this.auth.auth.signOut();
     this.router.navigate([""]);
     // alert("logout success");
+  }
 
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from 'angularfire2/firestore';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 import 'firebase/storage';
 import { AngularFireAuth } from 'angularfire2/auth';
 
@@ -46,6 +46,11 @@ export class CreatePropertyComponent implements OnInit {
       delete obj["file"];
       obj["tenentassigned"] = false;
       obj["tenentemail"] = "";
+      const dt = new Date();
+      let duedate = dt.getDate().toString() + "/" + (dt.getMonth()+1).toString()+ "/" +(dt.getFullYear().toString())
+      obj["duedate"] = duedate;
+      let duepayment =  ( Math.floor(Math.random() * 10000));
+      obj["duepayment"] = duepayment;
       console.log(Form.value);
       const description = Form.value.description;
       this.isloading = true;

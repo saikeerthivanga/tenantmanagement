@@ -1,29 +1,51 @@
-<ul class="nav nav1 nav-pills nav-fill">
-  <li class="nav-item">
-    <a class="nav-link" routerLink="">Properties</a>
-  </li>
-  <!-- <li class="nav-item">
-    <a class="nav-link" routerLink="">Assigned Tenants</a>
-  </li> -->
-  <li class="nav-item">
-    <a class="nav-link" routerLink="">Lease Dates</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink="">Due Payments</a>
-  </li>
-</ul>
-<ul class="nav nav2 nav-pills justify-content-end ml-auto">
-  <li class="nav-item">
-    <a class="nav-link" routerLink="" class="btn btn-success"
-      >Add new properties</a
-    >
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink="" class="btn btn-success"
-      >Add new tenants</a
-    >
-  </li>
-</ul>
-<div class="content">
-  <router-outlet></router-outlet>
+<div class="mt-5">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Activities</mat-card-title>
+      <mat-card-subtitle>You can perform the following activities</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- <ul class="nav nav1 nav-pills nav-fill"> -->
+    <ul style="list-style: none;">
+      <li class="nav-item">
+        
+          
+            <button mat-raised-button class="btn-block" >
+              <a class="nav-link" routerLink="/admin/registeranewtenent"> 
+                Your Properties / Register a new tenent for the property
+              </a>
+            </button>
+          
+
+        
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="">Assigned Tenants</a>
+      </li> -->
+      <li class="nav-item">
+        <button mat-raised-button class="btn-block btn-light">
+          <a class="nav-link" routerLink="">Lease Dates</a>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button mat-raised-button class="btn-block">
+          <a class="nav-link" routerLink="">Due Payments</a>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button mat-raised-button class="btn-block btn-light">
+          <a class="nav-link" routerLink="/admin/createproperty">Add new properties</a>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button mat-raised-button class="btn-block">
+          <a class="nav-link" routerLink="/admin/monitortenents">Monitor all tenents</a>
+        </button>
+      </li>
+    </ul>
+    <ul class="nav nav2 nav-pills justify-content-end ml-auto">
+      
+    </ul>    
+    </mat-card-content>
+  </mat-card>
 </div>
