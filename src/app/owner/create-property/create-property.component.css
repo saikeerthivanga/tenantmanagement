@@ -1,4 +1,4 @@
-.property-form {
+ .property-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
@@ -48,4 +48,13 @@
  }
  .tp-container > * {
     width: 100%;
+ } 
+
+ mat-card{
+   width: 80%;
+   margin: auto;
  }
+ .spinner{
+  margin-left: 45%;
+  margin-top: 17%;
+}

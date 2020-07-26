@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit  {
   title = 'tenantmanagementsystem';
   ngOnInit(){
-    this.router.navigate(['/admin/registeranewtenent'])
+    //this.router.navigate(['/admin/createproperty'])
+    
 
   }
 

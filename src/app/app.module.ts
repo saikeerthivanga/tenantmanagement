@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire'
 import { environment} from '../environments/environment.prod';
 import { LoginComponent } from './login/login.component';
-import { CreatePropertyComponent } from './create-property/create-property.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -16,13 +15,13 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {OwnerModule} from './owner/owner.module';
-import { LoginComponent } from './login/login.component'
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    CreatePropertyComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -36,7 +35,7 @@ import { LoginComponent } from './login/login.component'
     MatFormFieldModule,
     MatCardModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     OwnerModule
   ],
   providers: [],
