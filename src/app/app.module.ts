@@ -21,6 +21,7 @@ import {
   MatInputModule,
   MatIconModule,
   MatButtonModule,
+  MatProgressSpinnerModule,
 } from "@angular/material";
 
 import { SignupComponent } from './signup/signup.component';
@@ -46,6 +47,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatFormFieldModule,
     MatCardModule,
     MatIconModule,
+    MatProgressSpinnerModule,
 
     ReactiveFormsModule,
 

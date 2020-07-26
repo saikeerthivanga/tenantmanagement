@@ -16,6 +16,10 @@ export class SignupComponent implements OnInit {
     private router: Router
   ) {}
 
+  hidepwd: boolean = true;
+  hideconfpwd: boolean = true;
+  isLoading: boolean;
+
   ngOnInit() {
     console.log(this.auth.auth.currentUser);
   }
@@ -23,9 +27,11 @@ export class SignupComponent implements OnInit {
   signup(Form: NgForm) {
     if (Form.valid) {
       if (Form.value.password == Form.value.confirmpassword) {
+        this.isLoading = true;
         this.auth.auth
           .createUserWithEmailAndPassword(Form.value.email, Form.value.password)
           .then((result) => {
+            this.isLoading = false;
             console.log(result);
             result.user.updateProfile({ displayName: Form.value.name });
             this.db
@@ -36,6 +42,7 @@ export class SignupComponent implements OnInit {
             Form.resetForm();
           })
           .catch((err) => {
+            this.isLoading = false;
             console.log(err);
           });
       }

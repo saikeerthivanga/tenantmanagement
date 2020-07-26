@@ -1,100 +1,106 @@
-<mat-card>
-  <h3>SIGN UP</h3>
-  <form #ng="ngForm" (ngSubmit)="signup(ng)">
-    <div class="mt-2">
-      <mat-form-field>
-        <input
-          placeholder="Email"
-          matInput
-          type="email"
-          name="email"
-          required
-          ngModel
-        />
-        <mat-error>Email Id is Required</mat-error>
-      </mat-form-field>
-    </div>
-    <div class="mt-2">
-      <mat-form-field>
-        <input
-          placeholder="Name"
-          matInput
-          type="text"
-          name="name"
-          #name="ngModel"
-          required
-          ngModel
-        />
-        <mat-error *ngIf="name.invalid">Name is Required</mat-error>
-      </mat-form-field>
-    </div>
-    <div class="mt-2">
-      <mat-form-field>
-        <input
-          [type]="hidepwd ? 'password' : 'text'"
-          placeholder="Password"
-          matInput
-          type="password"
-          name="password"
-          #password="ngModel"
-          required
-          minlength="8"
-          ngModel
-        />
-        <button
-          type="button"
-          mat-icon-button
-          matSuffix
-          (click)="hidepwd = !hidepwd"
-          [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hidepwd"
-        >
-          <mat-icon>{{ hidepwd ? "visibility_off" : "visibility" }}</mat-icon>
+<div *ngIf="!isLoading">
+  <mat-card>
+    <h3>SIGN UP</h3>
+    <form #ng="ngForm" (ngSubmit)="signup(ng)">
+      <div class="mt-2">
+        <mat-form-field>
+          <input
+            placeholder="Email"
+            matInput
+            type="email"
+            name="email"
+            required
+            ngModel
+          />
+          <mat-error>Email Id is Required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="mt-2">
+        <mat-form-field>
+          <input
+            placeholder="Name"
+            matInput
+            type="text"
+            name="name"
+            #name="ngModel"
+            required
+            ngModel
+          />
+          <mat-error *ngIf="name.invalid">Name is Required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="mt-2">
+        <mat-form-field>
+          <input
+            [type]="hidepwd ? 'password' : 'text'"
+            placeholder="Password"
+            matInput
+            type="password"
+            name="password"
+            #password="ngModel"
+            required
+            minlength="8"
+            ngModel
+          />
+          <button
+            type="button"
+            mat-icon-button
+            matSuffix
+            (click)="hidepwd = !hidepwd"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hidepwd"
+          >
+            <mat-icon>{{ hidepwd ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+          <mat-error *ngIf="password.invalid"
+            >Password length should be atleast 8 characters</mat-error
+          >
+        </mat-form-field>
+      </div>
+      <div class="mt-2">
+        <mat-form-field>
+          <input
+            [type]="hideconfpwd ? 'password' : 'text'"
+            placeholder="Confirm Password"
+            matInput
+            type="password"
+            name="confirmpassword"
+            #confirmpassword="ngModel"
+            required
+            minlength="8"
+            ngModel
+          />
+          <button
+            type="button"
+            mat-icon-button
+            matSuffix
+            (click)="hideconfpwd = !hideconfpwd"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hideconfpwd"
+          >
+            <mat-icon>{{
+              hideconfpwd ? "visibility_off" : "visibility"
+            }}</mat-icon>
+          </button>
+          <mat-error *ngIf="confirmpassword.invalid"
+            >Password length should be atleast 8 characters</mat-error
+          >
+        </mat-form-field>
+      </div>
+  
+      <div class="mt-5">
+        <button mat-flat-button color="primary" type="submit">
+          
+          Sign Up
         </button>
-        <mat-error *ngIf="password.invalid"
-          >Password length should be atleast 8 characters</mat-error
-        >
-      </mat-form-field>
-    </div>
-    <div class="mt-2">
-      <mat-form-field>
-        <input
-          [type]="hideconfpwd ? 'password' : 'text'"
-          placeholder="Confirm Password"
-          matInput
-          type="password"
-          name="confirmpassword"
-          #confirmpassword="ngModel"
-          required
-          minlength="8"
-          ngModel
-        />
-        <button
-          type="button"
-          mat-icon-button
-          matSuffix
-          (click)="hideconfpwd = !hideconfpwd"
-          [attr.aria-label]="'Hide password'"
-          [attr.aria-pressed]="hideconfpwd"
-        >
-          <mat-icon>{{
-            hideconfpwd ? "visibility_off" : "visibility"
-          }}</mat-icon>
-        </button>
-        <mat-error *ngIf="confirmpassword.invalid"
-          >Password length should be atleast 8 characters</mat-error
-        >
-      </mat-form-field>
-    </div>
+      </div>
+    </form>
+  </mat-card>
+  
+</div>
 
-    <div class="mt-5">
-      <button mat-flat-button color="primary" type="submit">
-        <span
-          *ngIf="spinnerload"
-          class="spinner-border spinner-border-sm"
-        ></span>
-        Sign Up
-      </button>
-    </div>
-  </form>
-</mat-card>
+<div *ngIf="isLoading">
+
+  <mat-spinner class="spinner"></mat-spinner>
+
+</div>

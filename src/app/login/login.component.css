@@ -1,10 +1,12 @@
 mat-card {
-  margin-top: 5%;
+  /* margin-top: 5%;
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-left: 30%;
   margin-right: 30%;
-  width: 32%;
+  width: 32%; */
+  margin: auto;
+  width: 80%;
   font-family: "Lato", sans-serif;
   /* text-align: center; */
 }
@@ -22,4 +24,9 @@ form {
 }
 mat-form-field {
   width: 100%;
+}
+
+.spinner{
+  margin-left: 45%;
+  margin-top: 17%;
 }

@@ -8,11 +8,16 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class AuthGuard implements CanActivate {
-  constructor(public as: AuthService, private auth: AngularFireAuth){}
+  constructor(public as: AuthService, private auth: AngularFireAuth, private router: Router){}
   
   canActivate(): boolean{
     
-    return this.auth.auth.currentUser == null ? false : true;
+    
+    if(this.auth.auth.currentUser == null){
+      this.router.navigate(['']);
+      return false;
+    }
+    return true;
   }
   
 }
