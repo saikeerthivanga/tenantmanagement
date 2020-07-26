@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -182,7 +181,7 @@ public class Profile_Activity extends AppCompatActivity {
     public  void btnLogoutClick(View view)
     {
         mAuth.signOut();
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, MyLogin.class));
         finish();
     }
 

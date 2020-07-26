@@ -16,7 +16,7 @@
         <activity android:name=".Payment_DueActivity"></activity>
         <activity android:name=".Profile_Activity" />
         <activity android:name=".MainActivity2" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MyLogin" />
         <activity android:name=".Signup_Activity" />
         <activity android:name=".Splash_screen">
             <intent-filter>

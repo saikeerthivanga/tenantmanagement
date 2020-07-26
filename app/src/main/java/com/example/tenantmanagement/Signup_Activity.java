@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -79,7 +78,7 @@ public class Signup_Activity extends AppCompatActivity {
                                 Toast.makeText(Signup_Activity.this,
                                         "User Created Successfully", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(Signup_Activity.this,
-                                        MainActivity.class));
+                                        MyLogin.class));
                                 finish();
                             } else {
                                 Toast.makeText(Signup_Activity.this,

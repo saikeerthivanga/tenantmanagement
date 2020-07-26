@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    tools:context=".MyLogin"
     android:background="#503b96">
 
    <androidx.cardview.widget.CardView
