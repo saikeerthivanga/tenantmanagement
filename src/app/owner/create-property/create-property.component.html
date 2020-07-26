@@ -1,0 +1,104 @@
+<div *ngIf="!isloading">
+        
+
+
+<div class="tp-container" fxLayoutAlign="center center" fxFlexFill>
+    
+
+    <mat-card fxFlex="45">
+        <mat-toolbar color="primary">
+            <span>Create Property</span>
+        </mat-toolbar>
+        <form #ng="ngForm" (ngSubmit)="addproperty(ng)"  class="property-form" fxLayoutAlign="stretch" fxLayout="column">    
+
+        <table class="property-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="property-full-width">
+                    <mat-label>Property name</mat-label>
+                    <input matInput required ngModel name="propertyname">
+                    <mat-error>This field is required</mat-error>
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>  
+
+        <p>
+            <mat-form-field class="property-full-width">
+            <mat-label>Address</mat-label>
+            <textarea name="propertylocation" ngModel matInput placeholder="Ex. Lane no.2,colony" required></textarea>
+            <mat-error>This field is required</mat-error>
+            </mat-form-field>
+        </p>
+
+        <table class="property-full-width" cellspacing="0">
+            <tr>
+                <td><mat-form-field class="property-full-width">
+                <mat-label>City</mat-label>
+                <input name="city" matInput ngModel placeholder="Ex. Hyderabad" required>
+                <mat-error>This field is required</mat-error>
+                </mat-form-field></td>
+                <td><mat-form-field class="property-full-width">
+                <mat-label>State</mat-label>
+                <input name="state" ngModel matInput placeholder="Ex. Telangana" required>
+                <mat-error>This field is required</mat-error>
+                </mat-form-field></td>
+                <td><mat-form-field class="property-full-width" required>
+                <mat-label>Postal Code</mat-label>
+                <input name="postalcode" matInput #postalCode maxlength="6" ngModel placeholder="Ex. 500072" required>
+                <mat-error>This field is required</mat-error>
+                <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                </mat-form-field></td>
+            </tr>
+        </table>
+
+
+        <p>
+            <mat-form-field class="property-full-width">
+            <span matPrefix>INR &nbsp;</span>
+            <mat-label>Price</mat-label>
+            <input name="price_in_rupees" matInput placeholder="Ex: 10000" ngModel required>
+            <mat-error>This field is required</mat-error>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="property-full-width">
+            <mat-label>Type of property</mat-label>
+            <input name="typeofproperty" matInput placeholder="Ex: 3 bhk villa" ngModel required>
+            <mat-error>This field is required</mat-error>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="property-full-width">
+            <mat-label>Area in sqft</mat-label>
+            <input name="area_in_sqft" matInput placeholder="Ex: 1200" ngModel required>
+            <mat-error>This field is required</mat-error>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <input accept="image/*" type="file" (input) = "getfile($event.target.files[0])" ngModel required name="file">
+            
+        </p>
+
+        <section> 
+            <div *ngIf="fileurl!= '' ">
+                <img [src]="fileurl" height="250" width="250" alt="">
+            </div> 
+            <div class="example-button-row">   
+                <button [disabled]="ng.invalid" type="submit" mat-raised-button color="primary">Add</button>    
+            </div>
+        </section>
+        </form>
+    </mat-card> 
+
+</div>
+
+</div>
+
+<div *ngIf="isloading">
+    <mat-spinner class="spinner"></mat-spinner>
+
+</div>
