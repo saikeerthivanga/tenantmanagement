@@ -23,8 +23,6 @@ export class LoginComponent implements OnInit {
           } else {
             this.router.navigate(["owner/dashboard"]);
             alert("login success");
-            console.log(result.user.uid);
-
             Form.resetForm();
           }
         })
