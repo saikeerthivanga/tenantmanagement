@@ -17,9 +17,10 @@ import {
   MatButtonModule,
 } from "@angular/material";
 import { OwnerModule } from "./owner/owner.module";
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, SignupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

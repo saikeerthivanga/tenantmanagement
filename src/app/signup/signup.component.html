@@ -1,6 +1,6 @@
 <mat-card>
-  <h3>LOGIN</h3>
-  <form #ng="ngForm" (ngSubmit)="login(ng)">
+  <h3>SIGN UP</h3>
+  <form #ng="ngForm" (ngSubmit)="signup(ng)">
     <div class="mt-2">
       <mat-form-field>
         <input
@@ -14,7 +14,20 @@
         <mat-error>Email Id is Required</mat-error>
       </mat-form-field>
     </div>
-
+    <div class="mt-2">
+      <mat-form-field>
+        <input
+          placeholder="Name"
+          matInput
+          type="text"
+          name="name"
+          #name="ngModel"
+          required
+          ngModel
+        />
+        <mat-error *ngIf="name.invalid">Name is Required</mat-error>
+      </mat-form-field>
+    </div>
     <div class="mt-2">
       <mat-form-field>
         <input
@@ -43,6 +56,36 @@
         >
       </mat-form-field>
     </div>
+    <div class="mt-2">
+      <mat-form-field>
+        <input
+          [type]="hideconfpwd ? 'password' : 'text'"
+          placeholder="Confirm Password"
+          matInput
+          type="password"
+          name="confirmpassword"
+          #confirmpassword="ngModel"
+          required
+          minlength="8"
+          ngModel
+        />
+        <button
+          type="button"
+          mat-icon-button
+          matSuffix
+          (click)="hideconfpwd = !hideconfpwd"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hideconfpwd"
+        >
+          <mat-icon>{{
+            hideconfpwd ? "visibility_off" : "visibility"
+          }}</mat-icon>
+        </button>
+        <mat-error *ngIf="confirmpassword.invalid"
+          >Password length should be atleast 8 characters</mat-error
+        >
+      </mat-form-field>
+    </div>
 
     <div class="mt-5">
       <button mat-flat-button color="primary" type="submit">
@@ -50,7 +93,7 @@
           *ngIf="spinnerload"
           class="spinner-border spinner-border-sm"
         ></span>
-        Login
+        Sign Up
       </button>
     </div>
   </form>
