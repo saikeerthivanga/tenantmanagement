@@ -53,6 +53,7 @@
                android:layout_height="wrap_content"
                android:layout_marginTop="10dp"
                android:drawableLeft="@drawable/password"
+               android:inputType="textPassword"
                android:drawablePadding="10dp"
                android:hint="Password"
                android:layout_gravity="center_horizontal"></EditText>

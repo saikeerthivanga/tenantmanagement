@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Payment_DueActivity"
+    android:background="#503b96">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/tvpayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Details"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textColor="@color/colorPrimary">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tvdue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Due payment"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:textColor="#e80920">
+
+        </TextView>
+        <Button
+            android:id="@+id/btnpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Pay"
+            android:background="@drawable/shapes">
+
+        </Button>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>
+
