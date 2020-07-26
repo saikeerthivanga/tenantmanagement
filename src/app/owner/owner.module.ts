@@ -20,6 +20,5 @@ import {FormsModule} from '@angular/forms';
      AngularFireAuthModule,
      AngularFirestoreModule,
      FormsModule
-  ]
-})
+
 export class OwnerModule { }

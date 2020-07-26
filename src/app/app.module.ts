@@ -7,10 +7,12 @@ import { AngularFireModule } from '@angular/fire'
 import { environment} from '../environments/environment.prod';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import {OwnerModule} from './owner/owner.module';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
