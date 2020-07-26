@@ -1,0 +1,14 @@
+<mat-accordion multi=true *ngIf="tenants.length>0">
+  <mat-expansion-panel *ngFor ="let tenant of tenants">
+    <mat-expansion-panel-header>
+      {{tenant.propertyname}}
+    </mat-expansion-panel-header> 
+    <div *ngIf="paymentdone===false">
+      <p>Due Payment: {{tenant.duepayment}}</p>
+    </div>
+
+    <p>Lease Date: {{tenant.duedate}}</p>
+
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="tenants.length<=0">No tenants added yet</p>
